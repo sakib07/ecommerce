@@ -10,5 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//frontend site.............
 Route::get('/', 'HomeController@index');
+
+
+
+
+
+
+
+//backend site.............
+Route::get('/login', 'AdminController@index');
