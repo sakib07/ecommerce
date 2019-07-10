@@ -45,8 +45,18 @@
 						<a href="index.html"><i class="halflings-icon home"></i></a>
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
+					<p class="alert-danger">
+					<?php
+					$message=Session::get('message');
+					if($message){
+						echo $message;
+						Session::put('message',null);
+					}
+					?>
+					</p>
 					<h2>Login to your account</h2>
-					<form class="form-horizontal" action="" method="post">
+				<form class="form-horizontal" action="{{url('/admin-dashboard')}}" method="post">
+					{{csrf_field()}}
 						<fieldset>
 							
 							<div class="input-prepend" title="Username">
@@ -57,7 +67,7 @@
 
 							<div class="input-prepend" title="Password">
 								<span class="add-on"><i class="halflings-icon lock"></i></span>
-								<input class="input-large span10" name="password" id="password" type="password" placeholder="type password"/>
+								<input class="input-large span10" name="admin_password" id="password" type="password" placeholder="type password"/>
 							</div>
 							<div class="clearfix"></div>
 							
@@ -67,6 +77,8 @@
 								<button type="submit" class="btn btn-primary">Login</button>
 							</div>
 							<div class="clearfix"></div>
+					
+					
 					</form>
 					<hr>
 					<h3>Forgot Password?</h3>
