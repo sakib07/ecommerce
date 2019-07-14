@@ -31,7 +31,7 @@
 						
 					</div>
 					<div class="box-content">
-						<table class="table table-striped table-bordered bootstrap-datatable datatable">
+					<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
 								  <th>Category ID</th>
@@ -69,7 +69,7 @@
 					<a class="btn btn-info" href="{{URL::to('/edit-category/'.$v_category->category_id)}}">
 						<i class="halflings-icon white edit"></i>  
 					</a>
-					<a class="btn btn-danger" href="#">
+					<a class="btn btn-danger" href="{{URL::to('/delete-category/'.$v_category->category_id)}}">
 						<i class="halflings-icon white trash"></i> 
 					</a>
 				</td>

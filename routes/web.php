@@ -34,6 +34,8 @@ Route::get('/unactive_category/{category_id}','CategoryController@unactive_categ
 Route::get('/active_category/{category_id}','CategoryController@active_category');
 Route::get('/edit-category/{category_id}','CategoryController@edit_category');
 Route::post('/update-category/{category_id}','CategoryController@update_category');
+Route::get('/delete-category/{category_id}','CategoryController@delete_category');
+
 
 
 

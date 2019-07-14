@@ -470,7 +470,21 @@
 
 	<script src="{{ asset('backend') }}/js/custom.js"></script>
 	<!-- end: JavaScript-->
-	
+   <!-- <script type="text/javascript" src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.js')}}"></script>
+
+    <script>
+   	$(document).on("click","#delete", function(e){
+   		e.preventDefault();
+   		var link = $(this).attr("href");
+   		bootbox.confirm("Are You want to delete", function (confirmed){
+   			if (confirmed) {
+   				window.location.href = link;
+   			};
+   		});
+   	});
+   </script> -->
+
+ 
 </body>
 
 </html>
