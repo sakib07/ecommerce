@@ -343,9 +343,9 @@
 
 						<li><a href="{{URL::to('/add-category')}}"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Category</span></a></li>
 
-						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Brand </span></a></li>
+				<li><a href="{{URL::to('/all-manufacture')}}"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Manufacture </span></a></li>
 
-						<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Add Brand</span></a></li>
+						<li><a href="{{URL::to('/add-manufacture')}}"><i class="icon-dashboard"></i><span class="hidden-tablet"> Add Manufacture</span></a></li>
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span 																			class="hidden-tablet"> Dropdown</span><span class="label label-important"> 2</span></a>
 							<ul>
@@ -408,8 +408,8 @@
 	<footer>
 
 		<p>
-			<span style="text-align:left;float:left">&copy; 2013 <a href="http://bootstrapmaster.com/" alt="Bootstrap Themes">creativeLabs</a></span>
-			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://admintemplates.co/" alt="Bootstrap Admin Templates">Metro</a></span>
+			<span style="text-align:left;float:left">&copy; 2019 <a href="http://bootstrapmaster.com/" alt="Bootstrap Themes">creativeLabs</a></span>
+			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://admintemplates.co/" alt="Bootstrap Admin Templates">Sakib Rahman</a></span>
 		</p>
 
 	</footer>
