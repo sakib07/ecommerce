@@ -45,7 +45,10 @@ Route::get('/unactive_manufacture/{manufacture_id}','ManufactureController@unact
 Route::get('/active_manufacture/{manufacture_id}','ManufactureController@active_manufacture');
 Route::get('/edit-manufacture/{manufacture_id}','manufactureController@edit_manufacture');
 Route::post('/update-manufacture/{manufacture_id}','manufactureController@update_manufacture');
-
-
+//product related route.........
+ 
+Route::get('/add-product','ProductController@index');
+Route::post('/save-product','ProductController@save_product');
+Route::get('/all-product','ProductController@all_product');
 
 

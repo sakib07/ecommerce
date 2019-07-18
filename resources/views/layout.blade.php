@@ -233,8 +233,9 @@
 
                             </div>
                         </div><!--/category-products-->
-                        <!-- show category -->
-                    
+                        <!-- end show category -->
+                    <!-- show manufacture product -->
+
                         <div class="brands_products"><!--brands_products-->
                             <h2>Brands</h2>
                             <div class="brands-name">
@@ -251,6 +252,7 @@
                                 </ul>
                             </div>
                         </div><!--/brands_products-->
+                          <!--end  show manufacture product -->
                         
                         <div class="price-range"><!--price-range-->
                             <h2>Price Range</h2>

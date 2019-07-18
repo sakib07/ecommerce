@@ -14,7 +14,7 @@ class ManufactureController extends Controller
     {
     	return view('admin.add_manufacture');
     }
-
+//show manufecture
     public function save_manufacture(Request $request)
     {
       $data=array();
@@ -37,7 +37,7 @@ class ManufactureController extends Controller
    ->with('admin.all_manufacture',$manage_manufacture);
 
     }
-
+//delete
      public function delete_manufacture($manufacture_id)
     {
     	 DB::table('tbl_manufacture')

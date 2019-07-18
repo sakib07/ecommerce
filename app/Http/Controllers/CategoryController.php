@@ -15,6 +15,8 @@ class CategoryController extends Controller
     {
     	return view('admin.add_category');
     }
+
+    //show category
     public function all_category(){
    
    $all_category_info=DB::table('=tbl_category')->get();
