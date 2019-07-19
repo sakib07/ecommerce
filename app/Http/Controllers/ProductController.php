@@ -18,6 +18,7 @@ class ProductController extends Controller
 
     public function save_product(Request $request)
     {
+    	$this->AdminAuthCheck();
            $data=array();
         $data['product_name']=$request->product_name;
         $data['category_id']=$request->category_id;	
@@ -54,9 +55,12 @@ class ProductController extends Controller
 
     public function all_product()
     {
+    	$this->AdminAuthCheck();
+    	
     	 $all_product_info=DB::table('tbl_products')
  ->join('=tbl_category', 'tbl_products.category_id','=','=tbl_category.category_id')
   ->join('tbl_manufacture', 'tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
+  ->select('tbl_products.*','=tbl_category.category_name','tbl_manufacture.manufacture_name')
  ->get();
 
    $manage_product=view('admin.all_product')
@@ -64,6 +68,46 @@ class ProductController extends Controller
    return view('admin_layout')
    ->with('admin.all_product',$manage_product);
     }
+
+    //active
+     public function active_product($product_id)
+    {
+    	 DB::table('tbl_products')
+    	 ->where('product_id',$product_id)
+    	 ->update(['publication_status' => 1]);
+    	   Session::put('message','product actived successfully');
+    	 return Redirect::to('/all-product');
+    }
+
+    //unactive
+    public function unactive_product($product_id)
+    {
+    	 DB::table('tbl_products')
+    	 ->where('product_id',$product_id)
+    	 ->update(['publication_status' => 0]);
+    	   Session::put('message','product unactive successfully');
+    	 return Redirect::to('/all-product');
+    }
+
+    //delete
+      public function delete_product($product_id)
+    {
+    	 DB::table('tbl_products')
+    	 ->where('product_id',$product_id)
+    	->delete();
+    	   Session::put('message','product deleted successfully');
+    	 return Redirect::to('/all-product');
+}
+     //logim chack
+   public function AdminAuthCheck()
+   {
+   	$admin_id=Session::get('admin_id');
+   	if($admin_id){
+   		return;
+   	}else{
+   		return Redirect::to('/admin')->send();
+   	}
+   }
 }
 
 
