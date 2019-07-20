@@ -50,7 +50,7 @@
 							<tr>
 								<td>{{$v_product->product_id}}</td>
 								<td class="center">{{$v_product->product_name}}</td>
-	<td> <img src="{{URL::to($v_product->product_image)}} style="hight:80px; width:80px"></td>
+<td> <img src="{{URL::to($v_product->product_image)}}" style="height:80px; width:80px;"></td>
 						<td class="center">{{$v_product->product_price}}</td>
 						<td>{{$v_product->category_name}}</td>
 						<td>{{$v_product->manufacture_name}}</td>

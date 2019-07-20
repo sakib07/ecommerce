@@ -98,7 +98,47 @@ class ProductController extends Controller
     	   Session::put('message','product deleted successfully');
     	 return Redirect::to('/all-product');
 }
-     //logim chack
+      //edit
+      public function edit_product($product_id)
+    {
+    $this->AdminAuthCheck();
+
+       $product_info=DB::table('tbl_products')
+    	 ->where('product_id',$product_id)
+    	 ->first();
+
+    	 $product_info=view('admin.edit_product')
+   ->with('product_info',$product_info);
+   return view('admin_layout')
+   ->with('admin.edit_product',$product_info);
+
+    	 // return view('admin.edit_prod');
+    }
+//update
+    public function update_product(Request $request,$product_id)
+    {
+      $this->AdminAuthCheck();
+    $data=array();
+     $data['product_name']=$request->product_name;
+
+    	$data['product_price']=$request->product_price;
+    	$data['product_size']=$request->product_size;
+    	$data['product_color']=$request->product_color;
+
+    	
+    	
+
+
+	   DB::table('tbl_products')
+	    ->where('product_id',$product_id)
+    	 ->update($data);
+
+      Session::put('message','Product Updated successfully');
+      return Redirect::to('/all-product');
+
+    }
+  
+//logim chack
    public function AdminAuthCheck()
    {
    	$admin_id=Session::get('admin_id');
@@ -108,7 +148,6 @@ class ProductController extends Controller
    		return Redirect::to('/admin')->send();
    	}
    }
+     
 }
 
-
-                                                                                                                                                                                                                                                                                                                          

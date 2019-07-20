@@ -53,6 +53,8 @@ Route::get('/all-product','ProductController@all_product');
 Route::get('/active_product/{product_id}','ProductController@active_product');
 Route::get('/unactive_product/{product_id}','ProductController@unactive_product');
 Route::get('/delete-product/{product_id}','ProductController@delete_product');
+Route::get('/edit-product/{product_id}','ProductController@edit_product');
+Route::post('/update-product/{product_id}','ProductController@update_product');
 
 
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">{{ asset('frontend') }}/
-    <title>Home | E-Shopper</title>
+    <title>E-Shopper</title>
     <link href="{{ asset('frontend') }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('frontend') }}/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ asset('frontend') }}/css/prettyPhoto.css" rel="stylesheet">
@@ -32,15 +32,15 @@
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i> 01784129114</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> csesakib07@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="social-icons pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="facebook.com/ratin.rok"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
