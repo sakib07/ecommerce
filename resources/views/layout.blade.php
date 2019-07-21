@@ -40,7 +40,7 @@
                     <div class="col-sm-6">
                         <div class="social-icons pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="facebook.com/ratin.rok"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="http://facebook.com/ratin.rok""><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
@@ -226,7 +226,7 @@
                         foreach ($all_published_category as $v_category){?>
                       <div class="panel panel-default">
                       <div class="panel_heading">
-                      <h4 class="panel_title"><a href="#">{{$v_category->category_name}}</a></h4>
+                      <h4 class="panel_title"><a href="{{URL::to('/product_by_category/'.$v_category->category_id)}}">{{$v_category->category_name}}</a></h4>
                       </div>
                       </div>
                 <?php } ?>
@@ -246,7 +246,7 @@
                                         ->get();
 
                         foreach ($all_published_manufacture as $v_manufacture){?>
-                                <li><a href="#"> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
+                                <li><a href="{{URL::to('/product_by_manufacture/'.$v_manufacture->manufacture_id)}}"> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
                                   <?php } ?>
                                    
                                 </ul>
@@ -429,8 +429,8 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-                    <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+                    <p class="pull-left">Copyright Sakib Rahman Ratin</p>
+                    <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Sakib07</a></span></p>
                 </div>
             </div>
         </div>
