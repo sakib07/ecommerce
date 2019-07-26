@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="{{ asset('frontend') }}/images/home/logo.png" alt="" /></a>
+                            <a href="layout"><img src="{{ asset('frontend') }}/images/home/logo.png" alt="" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -155,45 +155,35 @@
                         </ol>
                         
                         <div class="carousel-inner">
+
+                      <?php
+                        $all_published_slider=DB::table('tbl_sliders')
+                                        ->where('publication_status',1)
+                                        ->get();
+                                $i=1;
+
+                        foreach ($all_published_slider as $v_slider){
+                               if($i==1){
+                            ?>
                             <div class="item active">
-                                <div class="col-sm-6">
+                            <?php }else{?>
+                        <div class="item">
+                            <?php } ?>
+                                <div class="col-sm-3">
                                     <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free E-Commerce Template</h2>
+                                    <h2>ALL NEW COLLECTION</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div>
-                                <div class="col-sm-6">
-                                    <img src="{{ asset('frontend') }}/images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                    <img src="{{ asset('frontend') }}/images/home/pricing.png"  class="pricing" alt="" />
+                                <div class="col-sm-9">
+                                    <img src="{{URL::to($v_slider->slider_image)}}" class="girl img-responsive" alt="" />
+                                    
                                 </div>
+
                             </div>
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>100% Responsive Design</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{ asset('frontend') }}/images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                    <img src="{{ asset('frontend') }}/images/home/pricing.png"  class="pricing" alt="" />
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free Ecommerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{ asset('frontend') }}/images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                    <img src="{{ asset('frontend') }}/images/home/pricing.png" class="pricing" alt="" />
-                                </div>
-                            </div>
-                            
+                           <?php $i++; } ?>
                         </div>
+                        
                         
                         <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
                             <i class="fa fa-angle-left"></i>
@@ -223,7 +213,8 @@
                                         ->where('publication_status',1)
                                         ->get();
 
-                        foreach ($all_published_category as $v_category){?>
+                        foreach ($all_published_category as $v_category){
+                            ?>
                       <div class="panel panel-default">
                       <div class="panel_heading">
                       <h4 class="panel_title"><a href="{{URL::to('/product_by_category/'.$v_category->category_id)}}">{{$v_category->category_name}}</a></h4>
@@ -246,7 +237,7 @@
                                         ->get();
 
                         foreach ($all_published_manufacture as $v_manufacture){?>
-                                <li><a href="{{URL::to('/product_by_manufacture/'.$v_manufacture->manufacture_id)}}"> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
+                                <li><a href="{{URL::to('/product_by_manufacture/'.$v_manufacture->manufacture_id)}}"> <span class="pull-right">(15)</span>{{$v_manufacture->manufacture_name}}</a></li>
                                   <?php } ?>
                                    
                                 </ul>
@@ -301,7 +292,7 @@
                                     </div>
                                 </a>
                                 <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <h2>31 July 2019</h2>
                             </div>
                         </div>
                         
