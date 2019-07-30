@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">{{ asset('frontend') }}/
+   <!--  <meta name="author" content="">{{ asset('frontend') }}/ -->
     <title>E-Shopper</title>
     <link href="{{ asset('frontend') }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('frontend') }}/css/font-awesome.min.css" rel="stylesheet">
@@ -25,8 +25,8 @@
 </head><!--/head-->
 
 <body>
-    <header id="header"><!--header-->
-        <div class="header_top"><!--header_top-->
+  <header id="header">
+        <div class="header_top">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="layout"><img src="{{ asset('frontend') }}/images/home/logo.png" alt="" /></a>
+                            <a href="{{URL::to('/')}}"><img src="{{ asset('frontend') }}/images/home/logo.png" alt="" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -89,7 +89,7 @@
                                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                 <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                 <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
                             </ul>
                         </div>
@@ -112,13 +112,13 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="{{URL::to('/')}}" class="active">Home</a></li>
                                 <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
                                         <li><a href="product-details.html">Product Details</a></li> 
                                         <li><a href="checkout.html">Checkout</a></li> 
-                                        <li><a href="cart.html">Cart</a></li> 
+                                        <li><a href="{{URL::to('/show-cart')}}">Cart</a></li> 
                                         <li><a href="login.html">Login</a></li> 
                                     </ul>
                                 </li> 
@@ -128,7 +128,7 @@
                                         <li><a href="blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="404.html">404</a></li>
+                                <!-- <li><a href="404.html">404</a></li> -->
                                 <li><a href="contact-us.html">Contact</a></li>
                             </ul>
                         </div>
@@ -176,7 +176,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div>
                                 <div class="col-sm-9">
-                                    <img src="{{URL::to($v_slider->slider_image)}}" class="girl img-responsive" alt="" />
+                                    <img src="{{URL::to($v_slider->slider_image)}}" style="height: 420px; width: 720px;" class="girl img-responsive" alt="" />
                                     
                                 </div>
 
